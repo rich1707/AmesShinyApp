@@ -1,12 +1,14 @@
 # 01 Libraries ----
 
+library(shiny)
 library(tidyverse)
 library(scales)  
-library(shiny)
 library(kableExtra)
 library(bslib)
 
 # 02 Control options ----
+
+source("data_prep.R")
 
 # Features
 feature_names <- c("Sale Price", "Lot Frontage", "Lot Area", 
@@ -142,6 +144,7 @@ ui <- fluidPage(
 
 
 server <- function(input, output, session) {
+
    
    # First Plot ----
    
